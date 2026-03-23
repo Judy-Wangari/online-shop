@@ -26,13 +26,65 @@ class DatabaseSeeder extends Seeder
             'name'=>'User',
         ]);
 
+        User::create([
+            'name' =>'Admin',
+            'email' =>'admin@onlineshop.com',
+            'phone' =>'0712345678',
+            'delivery_address' =>'N/A',
+            'role_id' =>1,
+            'password' =>Hash::make('ADMIN123'),
+        ]);
 
+        User::create([
+            'name' =>'Mel Kim',
+            'email' =>'melkim@example.com',
+            'phone' =>'0712345678',
+            'delivery_address' =>'N/A',
+            'role_id' =>2,
+            'password' =>Hash::make('MEL12345'),
+        ]);
         
-        // // User::factory(10)->create();
-
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-    }
+     
+    }   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
