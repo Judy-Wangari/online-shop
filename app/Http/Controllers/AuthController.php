@@ -16,14 +16,18 @@ class AuthController extends Controller
             'phone'=>'nullable|string',
             'delivery_address'=>'nullable|string',
             'role_id'=>'required|integer|exists:roles,id',
+            'password'=>'required|string|min:6'
         ]);
         $user = new User();
         $user->name = $validated['name'];
         $user->email = $validated['email'];
-        $user->password = Hash::make($validated['password']);
-        $user->role_id = $validated['role_id'];
         $user->phone = $validated['phone'];
         $user->delivery_address = $validated['delivery_address'];
+        $user->role_id = $validated['role_id'];
+        $user->password = Hash::make($validated['password']);
+      
+       
+      
 
          try{
             $user->save();

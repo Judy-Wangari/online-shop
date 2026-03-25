@@ -73,7 +73,7 @@ class UserController extends Controller
     {
         $validated = $request->validate([
             'name'=>'required|string',
-            'email'=>'required|email|unique:users,email',
+            'email'=>'required|email',
             'phone'=>'nullable|string',
             'delivery_address'=>'nullable|string',
             'role_id'=>'required|integer|exists:roles,id',
